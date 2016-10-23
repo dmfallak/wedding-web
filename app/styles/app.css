@@ -1,0 +1,56 @@
+
+h2 {
+  font-size: 48px;
+}
+
+h2, h3 {
+  font-family: 'Lobster';
+}
+
+html {
+  background: url(../assets/cover.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+@font-face {
+  font-family: 'Lobster';
+  src: url('../fonts/lobster/lobster1_4.otf')
+}
+
+.nav-bar {
+  text-align: center;
+  position: absolute;
+  right: 0px;
+  left: 0px;
+}
+
+.nav-bar a {
+  text-decoration: none;
+  color: rgb(170,114,218);
+  font-weight: bold
+}
+
+.landscape #cover-text-div {
+  text-align: center;
+  position: absolute;
+  right: 100px;
+  top: 100px;
+  width: 500;
+  color: rgb(174,218,154);
+  font-family: 'Lobster';
+  font-size: 300%;
+}
+
+.portrait #cover-text-div {
+  text-align: center;
+  position: absolute;
+  right: 0px;
+  left: 0px;
+  top: 100px;
+  color: rgb(174,218,154);
+  font-family: 'Lobster';
+  font-size: 200%;
+}
