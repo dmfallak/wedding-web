@@ -34,6 +34,10 @@ html {
   font-family: "Helvetica";
 }
 
+.landscape .nav-bar {
+  font-size: 125%;
+}
+
 .portrait #cover-text-div .sub-heading {
   font-size: 50%;
 }
@@ -43,7 +47,7 @@ html {
   position: absolute;
   right: 0px;
   left: 0px;
-  top: 30px;
+  top: 50px;
   color: rgb(174,218,154);
   font-family: 'Lobster';
   font-size: 300%;
