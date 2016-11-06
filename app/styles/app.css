@@ -13,6 +13,7 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  color: rgb(0,0,0);
 }
 
 @font-face {
@@ -32,10 +33,6 @@ body {
   font-family: "Helvetica";
 }
 
-.landscape .nav-bar {
-  
-}
-
 #cover-text-div .sub-heading {
   font-size: 50%;
 }
@@ -46,7 +43,6 @@ body {
   right: 0px;
   left: 0px;
   top: 50px;
-  /*color: rgb(174,218,154);*/
   font-family: 'Lobster';
   font-size: 300%;
 }
@@ -57,7 +53,6 @@ body {
   right: 0px;
   left: 0px;
   top: 30px;
-  /*color: rgb(174,218,154);*/
   font-family: 'Lobster';
   font-size: 200%;
 }
