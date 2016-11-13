@@ -1,6 +1,7 @@
 import Ember from 'ember';
 import Resolver from 'ember-resolver';
 import config from './config/environment';
+import DS from 'ember-data';
 
 let App;
 
@@ -10,6 +11,11 @@ App = Ember.Application.extend({
   modulePrefix: config.modulePrefix,
   podModulePrefix: config.podModulePrefix,
   Resolver
+});
+
+/* Point the RESTAdapter at the python api */
+App.ApplicationAdapter = DS.RESTAdapter.extend({
+  host: 'https://' + window.location.host + ':4443'
 });
 
 export default App;
