@@ -7,7 +7,7 @@ export default Ember.Route.extend({
   actions: {
     submitInvitee: function(invitee) {
       var store = this.get("store");
-      var guest = Ember.$.getJSON("/api/guest/" + invitee)
+      var guest = store.find('guest', invitee);
     }
   }
 });
