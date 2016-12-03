@@ -10,6 +10,5 @@ export default DS.Model.extend({
   hotel: DS.attr('boolean'),
   shuttleToTime: DS.attr('string'),
   shuttleFromTime: DS.attr('string'),
-  id: DS.attr('number'),
   attending: DS.attr('boolean')
 });

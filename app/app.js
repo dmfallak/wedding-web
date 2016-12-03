@@ -13,11 +13,6 @@ App = Ember.Application.extend({
   Resolver
 });
 
-/* Point the RESTAdapter at the python api */
-App.ApplicationAdapter = DS.RESTAdapter.extend({
-  host: 'https://' + window.location.host + ':4443'
-});
-
 export default App;
 
 /* globals $ */

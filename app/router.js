@@ -7,7 +7,10 @@ const Router = Ember.Router.extend({
 
 Router.map(function() {
   this.route('directions');
-  this.route('rsvp');
+  this.route('rsvp', function() {
+    this.route('invitee');
+    this.route('guests');
+  });
 });
 
 export default Router;
