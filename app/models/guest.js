@@ -1,14 +1,14 @@
 import DS from "ember-data";
 
 export default DS.Model.extend({
-  invitee: DS.attr('string'),
-  attendingMax: DS.attr('number'),
-  attendingNum: DS.attr('number'),
-  guestNames: DS.attr('string'),
-  entree1: DS.attr('string'),
-  entree2: DS.attr('string'),
-  hotel: DS.attr('boolean'),
-  shuttleToTime: DS.attr('string'),
-  shuttleFromTime: DS.attr('string'),
-  attending: DS.attr('boolean')
+  invitee: DS.attr(),
+  attendingMax: DS.attr(),
+  attendingNum: DS.attr(),
+  guestNames: DS.attr(),
+  entree1: DS.attr(),
+  entree2: DS.attr(),
+  hotel: DS.attr(),
+  shuttleToTime: DS.attr(),
+  shuttleFromTime: DS.attr(),
+  attending: DS.attr()
 });
