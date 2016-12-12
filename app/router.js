@@ -10,7 +10,10 @@ Router.map(function() {
   this.route('directions');
   this.route('rsvp', function() {
     this.route('invitee');
-    this.route('guests');
+    this.route('num_attendees', { path: 'num_attendees/:guest_id' });
+    this.route('attendee_names', { path: 'attendee_names/:guest_id' });
+    this.route('meal_choices', { path: 'meal_choices/:guest_id' });
+    this.route('attending', { path: 'attending/:guest_id' });
   });
 });
 
