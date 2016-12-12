@@ -7,7 +7,9 @@ export default Ember.Route.extend({
   actions: {
     submitInvitee: function(invitee) {
       var store = this.get("store");
-      var guest = store.find('guest', invitee);
+      store.queryRecord('guest', {filter: {invitee: invitee}}).then(function(guest) {
+        console.log("Found guest: " + guest.get('invitee'));
+      });
     }
   }
 });

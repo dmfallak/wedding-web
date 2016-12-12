@@ -10,5 +10,6 @@ export default DS.Model.extend({
   hotel: DS.attr(),
   shuttleToTime: DS.attr(),
   shuttleFromTime: DS.attr(),
-  attending: DS.attr()
+  attending: DS.attr(),
+  responded: DS.attr()
 });
