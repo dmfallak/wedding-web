@@ -4,8 +4,14 @@
       <h4 class="modal-title">Number of attendees</h4>
     </div>
     <div class="modal-body">
-      <p>Please enter the number of attendees that will be coming, including yourself. This should be a number between 1 a</p>
+      <p>Please enter the number of attendees that will be coming, including yourself. This should be a number between 1 and {{model.attendingMax}}.</p>
+      <form>
+      <div class="form-group has-error">
+        {{input type="text" value=model.attendingNum size="30" class="form-control"}}
+        <span id="helpBlock" class="help-block">Must be between 1 and {{model.attendingMax}}.</span>
+      </div>
 
+      </form>
     </div>
     <div class="modal-footer">
         <button type="button" class="btn btn-primary" {{action "submitInvitee" invitee}}>Next</button>
