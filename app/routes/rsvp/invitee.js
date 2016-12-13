@@ -8,8 +8,8 @@ export default Ember.Route.extend({
     submitInvitee: function(invitee) {
       var store = this.get("store");
       var route = this;
-      store.queryRecord('guest', {filter: {invitee: invitee}}).then(function(guest) {
-        route.transitionTo('rsvp.attending', guest)
+      store.queryRecord('guest', {invitee: invitee}).then(function(guest) {
+        route.transitionTo('rsvp.attending', guest);
       });
     }
   }
