@@ -1,13 +1,16 @@
 <div class="modal-dialog" role="document">
   <div class="modal-content">
     <div class="modal-header">
-      <h4 class="modal-title">Number of attendees</h4>
+      <h4 class="modal-title">Attendee Names</h4>
     </div>
     <div class="modal-body">
-      <p>Please select the number of attendees that will be coming (including yourself).</p>
+      <p>Please enter the names of your attendees.</p>
+      {{#each attendeeNameInputs as |input|}}
+        <input type="text" id="attendee{{input}}" class="form-control stacked-input"/>
+      {{/each}}
     </div>
     <div class="modal-footer">
-        <button type="button" class="btn btn-primary" {{action "submitInvitee" invitee}}>Next</button>
+        <button type="button" class="btn btn-primary" {{action "next"}}>Next</button>
     </div>
   </div><!-- /.modal-content -->
 </div><!-- /.modal-dialog -->
