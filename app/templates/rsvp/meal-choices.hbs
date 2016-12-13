@@ -1,14 +1,48 @@
 <div class="modal-dialog" role="document">
   <div class="modal-content">
     <div class="modal-header">
-      <h4 class="modal-title">Enter name</h4>
+      <h4 class="modal-title">Meal Choices</h4>
     </div>
     <div class="modal-body">
-      <p>Please type your name as it appears on your invitation.</p>
-      {{input type="text" value=invitee size="30"}}
+      <p>Please enter your party's meal choices.</p>
+      <br>
+      {{#each mealChoiceInputs as |name index|}}
+        <b>{{name}}:</b><br>
+        <table border="0">
+          <tr>
+            <td>Entree 1:&nbsp;</td>
+            <td>
+              <select id="entree1-{{index}}">
+                <option>Baked Atlantic Salmon</option>
+                <option>Stuffed Red Peppers (Veg)</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>Entree 2:&nbsp;</td>
+            <td>
+              <select id="entree2-{{index}}">
+                <option>New York Striploin</option>
+                <option>Chicken Breast</option>
+                <option>Eggplant Ratatouille (Veg)</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>Side:&nbsp;</td>
+            <td>
+              <select id="side-{{index}}">
+                <option>Roasted Potatoes</option>
+                <option>Seasoned Vegetables</option>
+              </select>
+            </td>
+          </tr>
+        </table>
+        <br>
+      {{/each}}
     </div>
     <div class="modal-footer">
-        <button type="button" class="btn btn-primary" {{action "submitInvitee" invitee}}>Next</button>
+        <button type="button" class="btn btn-primary" {{action "next"}}>Next</button>
     </div>
   </div><!-- /.modal-content -->
 </div><!-- /.modal-dialog -->

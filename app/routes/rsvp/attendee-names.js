@@ -14,7 +14,7 @@ export default Ember.Route.extend({
       for (var i = 1; i <= attendingNum; i++) {
         var guestName = $("#attendee" + i).val();
 
-        if (guestNames != "") {
+        if (guestNames !== "") {
           guestNames += ",";
         }
 

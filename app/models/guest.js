@@ -7,6 +7,7 @@ export default DS.Model.extend({
   guestNames: DS.attr(),
   entree1: DS.attr(),
   entree2: DS.attr(),
+  side: DS.attr(),
   hotel: DS.attr(),
   shuttleToTime: DS.attr(),
   shuttleFromTime: DS.attr(),
