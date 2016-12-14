@@ -10,9 +10,11 @@
       <p><b>To Ceremony:</b><br/>
         <form id="toSelect" class="form-group">
           {{#each model.shuttleTo as |choice index|}}
-          <input type="radio" name="shuttleTo{{index}}" value="{{index}}"
-            {{unless choice.seatsFree "disabled"}}/>
-          {{choice.time}} ({{choice.seatsFree}} seats left)<br/>
+          <div class="radio">
+            <label><input type="radio" id="shuttleTo{{index}}" name="shuttleTo" value="{{index}}"/>
+              <!-- {unless choice.seatsFree "disabled"}/> -->
+            &nbsp;{{choice.time}} ({{choice.seatsFree}} seats left)</label>
+          </div>
           {{/each}}
         </form>
       </p>

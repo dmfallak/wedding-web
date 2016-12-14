@@ -12,7 +12,7 @@ export default Ember.Route.extend({
 
     submitYes: function() {
       this.currentModel.set("hotel", true);
-      this.transitionTo('rsvp.shuttle', this.currentModel);
+      this.transitionTo('rsvp.shuttle', this.currentModel.id);
     }
   }
 });

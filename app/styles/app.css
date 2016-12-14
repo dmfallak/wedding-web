@@ -60,3 +60,8 @@ body {
 .stacked-input {
   margin-top: 10px;
 }
+
+
+input[type="radio"] {
+  margin-top: 0px;
+}
