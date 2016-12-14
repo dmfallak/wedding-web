@@ -9,6 +9,5 @@ export default Ember.Controller.extend({
     }
 
     return choices;
-  }),
-  dummy: "dummy"
+  })
 });

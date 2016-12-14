@@ -8,7 +8,6 @@ export default Ember.Route.extend({
   /* globals $ */
   actions: {
     next: function() {
-      var attendingNum = this.currentModel.get("attendingNum");
       var guestNames = this.currentModel.get("guestNames");
       guestNames = guestNames.split(",");
       
@@ -17,8 +16,6 @@ export default Ember.Route.extend({
       var sideList = "";
 
       for (var i = 0; i < guestNames.length; i++) {
-        var guestName = guestNames[i];
-
         var entree1 = $("#entree1-"+i).val();
         var entree2 = $("#entree2-"+i).val();
         var side = $("#side-"+i).val();
