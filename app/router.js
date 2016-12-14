@@ -15,6 +15,7 @@ Router.map(function() {
     this.route('meal_choices', { path: 'meal_choices/:guest_id' });
     this.route('attending', { path: 'attending/:guest_id' });
     this.route('hotel', { path: 'hotel/:guest_id' });
+    this.route('shuttle', { path: 'shuttle/:guest_id' });
   });
 });
 

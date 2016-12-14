@@ -1,0 +1,24 @@
+<div class="modal-dialog" role="document">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h4 class="modal-title">Shuttle To/From Ceremony</h4>
+    </div>
+    <div class="modal-body">
+      <p>We have chartered a shuttle to bring people back and forth between 
+      the hotel and the ceremony. If you would like to use the shuttle, please reserve
+      a pickup time to go to the ceremony and from the ceremony.</p>
+      <p><b>To Ceremony:</b><br/>
+        <form id="toSelect" class="form-group">
+          {{#each model.shuttleTo as |choice index|}}
+          <input type="radio" name="shuttleTo{{index}}" value="{{index}}"
+            {{unless choice.seatsFree "disabled"}}/>
+          {{choice.time}} ({{choice.seatsFree}} seats left)<br/>
+          {{/each}}
+        </form>
+      </p>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-primary" {{action "next"}}>Next</button>
+    </div>
+  </div><!-- /.modal-content -->
+</div><!-- /.modal-dialog -->
