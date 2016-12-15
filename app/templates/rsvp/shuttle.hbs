@@ -11,7 +11,7 @@
         <form id="toSelect" class="form-group">
           {{#each model.shuttleTo as |choice index|}}
           <div class="radio">
-            <label><input type="radio" id="shuttleTo{{index}}" name="shuttleTo" value="{{index}}"/>
+            <label>
               {{#if (greater model.guest.attendingNum choice.seatsFree)}}
                 <input type="radio" id="shuttleTo{{index}}" name="shuttleTo" value="{{index}}" disabled/>&nbsp;{{choice.time}} (FULL)
               {{else}}
@@ -20,6 +20,11 @@
             </label>
           </div>
           {{/each}}
+          <div class="radio">
+            <label>
+              <input type="radio" id="shuttleToNone" name="shuttleTo" value="-1" checked/>&nbsp;No shuttle
+            </label>
+          </div>
         </form>
       </p>
       <p><b>From Ceremony:</b><br/>
@@ -35,6 +40,11 @@
             </label>
           </div>
           {{/each}}
+          <div class="radio">
+            <label>
+              <input type="radio" id="shuttleFromNone" name="shuttleFrom" value="-1" checked/>&nbsp;No shuttle
+            </label>
+          </div>
         </form>
       </p>
     </div>
