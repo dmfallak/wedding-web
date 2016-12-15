@@ -9,7 +9,11 @@ export default Ember.Route.extend({
       var store = this.get("store");
       var route = this;
       store.queryRecord('guest', {invitee: invitee}).then(function(guest) {
-        route.transitionTo('rsvp.attending', guest);
+        if (guest.get('responded')) {
+          route.transitionTo('rsvp.already_responded');
+        } else {
+          route.transitionTo('rsvp.attending', guest);
+        }
       });
     }
   }

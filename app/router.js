@@ -17,6 +17,7 @@ Router.map(function() {
     this.route('hotel', { path: 'hotel/:guest_id' });
     this.route('shuttle', { path: 'shuttle/:guest_id' });
     this.route('confirm', { path: 'confirm/:guest_id' });
+    this.route('already_responded');
   });
 });
 
