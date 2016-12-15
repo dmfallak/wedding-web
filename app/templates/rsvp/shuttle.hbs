@@ -12,8 +12,27 @@
           {{#each model.shuttleTo as |choice index|}}
           <div class="radio">
             <label><input type="radio" id="shuttleTo{{index}}" name="shuttleTo" value="{{index}}"/>
-              <!-- {unless choice.seatsFree "disabled"}/> -->
-            &nbsp;{{choice.time}} ({{choice.seatsFree}} seats left)</label>
+              {{#if (greater model.guest.attendingNum choice.seatsFree)}}
+                <input type="radio" id="shuttleTo{{index}}" name="shuttleTo" value="{{index}}" disabled/>&nbsp;{{choice.time}} (FULL)
+              {{else}}
+                <input type="radio" id="shuttleTo{{index}}" name="shuttleTo" value="{{index}}"/>&nbsp;{{choice.time}}
+              {{/if}}
+            </label>
+          </div>
+          {{/each}}
+        </form>
+      </p>
+      <p><b>From Ceremony:</b><br/>
+        <form id="fromSelect" class="form-group">
+          {{#each model.shuttleFrom as |choice index|}}
+          <div class="radio">
+            <label>
+              {{#if (greater model.guest.attendingNum choice.seatsFree)}}
+                <input type="radio" id="shuttleFrom{{index}}" name="shuttleFrom" value="{{index}}" disabled/> &nbsp;{{choice.time}} (FULL)
+              {{else}}
+                <input type="radio" id="shuttleFrom{{index}}" name="shuttleFrom" value="{{index}}"/> &nbsp;{{choice.time}}
+              {{/if}}
+            </label>
           </div>
           {{/each}}
         </form>
