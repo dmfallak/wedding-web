@@ -16,6 +16,7 @@ Router.map(function() {
     this.route('attending', { path: 'attending/:guest_id' });
     this.route('hotel', { path: 'hotel/:guest_id' });
     this.route('shuttle', { path: 'shuttle/:guest_id' });
+    this.route('confirm', { path: 'confirm/:guest_id' });
   });
 });
 

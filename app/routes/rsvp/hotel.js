@@ -7,7 +7,8 @@ export default Ember.Route.extend({
 
   actions: {
     submitNo: function() {
-
+      this.currentModel.set("hotel", false);
+      this.transitionTo('rsvp.confirm', this.currentModel);
     },
 
     submitYes: function() {

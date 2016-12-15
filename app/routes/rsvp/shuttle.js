@@ -7,5 +7,17 @@ export default Ember.Route.extend({
       shuttleFrom: this.store.findAll('shuttleFrom'),
       shuttleTo: this.store.findAll('shuttleTo')
     };
+  },
+
+  /* globals $ */
+  actions: {
+    next: function() {
+      var toSelection = $('input[name=shuttleTo]:checked').val();
+      var fromSelection = $('input[name=shuttleFrom]:checked').val();
+
+      this.currentModel.guest.set("shuttleToTime", toSelection);
+      this.currentModel.guest.set("shuttleFromTime", fromSelection);
+      this.transitionTo('rsvp.confirm', this.currentModel.guest);
+    }
   }
 });

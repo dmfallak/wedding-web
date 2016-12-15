@@ -9,6 +9,8 @@ export default Ember.Route.extend({
     submitYes: function() {
       var guest = this.currentModel;
 
+      guest.set("attending", true);
+
       if (guest.get('attendingMax') > 1) {
         this.transitionTo('rsvp.num_attendees', guest);
       } else {
@@ -17,7 +19,8 @@ export default Ember.Route.extend({
     },
 
     submitNo: function() {
-
+      this.currentModel.set("attending", false);
+      this.transitionTo("rsvp.confirm", this.currentModel);
     }
   }
 });
