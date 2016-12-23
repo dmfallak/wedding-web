@@ -4,9 +4,16 @@
       <h4 class="modal-title">Shuttle To/From Ceremony</h4>
     </div>
     <div class="modal-body">
-      <p>We have chartered a shuttle to bring people back and forth between 
-      the hotel and the ceremony. If you would like to use the shuttle, please reserve
-      your pickup times.</p>
+      {{#if model.hasConflict}}
+        <p class="has-error">
+        Sorry, someone must have reserved the last spot on one of your shuttle choices
+        before you had a chance to confirm! Please choose again.
+        </p>
+      {{else}}
+        <p>We have chartered a shuttle to bring people back and forth between 
+        the hotel and the ceremony. If you would like to use the shuttle, please reserve
+        your pickup times.</p>
+      {{/if}}
       <p><b>To Ceremony:</b><br/>
         <form id="toSelect" class="form-group">
           {{#each model.shuttleTo as |choice|}}

@@ -10,18 +10,11 @@ export default Ember.Route.extend({
   conflict: null,
 
   model(params) {
-    var hasConflict = this.get('conflict');
-
-    if (hasConflict) {
-      $("#conflict").show();
-    } else {
-      $("#conflict").hide();
-    }
-
     return {
       guest: this.store.findRecord('guest', params.guest_id),
       shuttleFrom: this.store.findAll('shuttleFrom'),
-      shuttleTo: this.store.findAll('shuttleTo')
+      shuttleTo: this.store.findAll('shuttleTo'),
+      hasConflict: params.conflict
     };
   },
 

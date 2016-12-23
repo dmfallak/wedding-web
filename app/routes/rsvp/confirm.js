@@ -8,7 +8,13 @@ export default Ember.Route.extend({
   actions: {
     confirm: function() {
       this.currentModel.set("responded", true);
-      this.currentModel.save();
+      var route = this;
+      this.currentModel.save().catch(function(reason) {
+        if (reason.errors[0].status === "400") {
+          route.transitionTo('rsvp.shuttle', route.currentModel.get('id'), 
+            {queryParams: {conflict:true}});
+        }
+      });
       this.transitionTo('index');
     },
 
