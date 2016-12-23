@@ -3,9 +3,10 @@
     <div class="modal-header">
       <h4 class="modal-title">Enter Invitee Code</h4>
     </div>
-    <div class="modal-body">
+    <div class="modal-body" id="inviteeGroup">
       <p>Please type your invitee code as provided on your invitation.</p>
       {{input type="text" value=invitee size="30" class="form-control"}}
+      <span id="helpBlock" class="help-block" style="display:none">Invitee code not found.</span>
     </div>
     <div class="modal-footer">
         <button type="button" class="btn btn-primary" {{action "submitInvitee" invitee}}>Next</button>
