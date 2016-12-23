@@ -9,13 +9,13 @@
       your pickup times.</p>
       <p><b>To Ceremony:</b><br/>
         <form id="toSelect" class="form-group">
-          {{#each model.shuttleTo as |choice index|}}
+          {{#each model.shuttleTo as |choice|}}
           <div class="radio">
             <label>
               {{#if (greater model.guest.attendingNum choice.seatsFree)}}
-                <input type="radio" id="shuttleTo{{index}}" name="shuttleTo" value="{{index}}" disabled/>&nbsp;{{choice.time}} (FULL)
+                <input type="radio" id="shuttleTo{{choice.id}}" name="shuttleTo" value="{{choice.id}}" disabled/>&nbsp;{{choice.time}} (FULL)
               {{else}}
-                <input type="radio" id="shuttleTo{{index}}" name="shuttleTo" value="{{index}}"/>&nbsp;{{choice.time}}
+                <input type="radio" id="shuttleTo{{choice.id}}" name="shuttleTo" value="{{choice.id}}"/>&nbsp;{{choice.time}}
               {{/if}}
             </label>
           </div>
@@ -29,13 +29,13 @@
       </p>
       <p><b>From Ceremony:</b><br/>
         <form id="fromSelect" class="form-group">
-          {{#each model.shuttleFrom as |choice index|}}
+          {{#each model.shuttleFrom as |choice|}}
           <div class="radio">
             <label>
               {{#if (greater model.guest.attendingNum choice.seatsFree)}}
-                <input type="radio" id="shuttleFrom{{index}}" name="shuttleFrom" value="{{index}}" disabled/> &nbsp;{{choice.time}} (FULL)
+                <input type="radio" id="shuttleFrom{{choice.id}}" name="shuttleFrom" value="{{choice.id}}" disabled/> &nbsp;{{choice.time}} (FULL)
               {{else}}
-                <input type="radio" id="shuttleFrom{{index}}" name="shuttleFrom" value="{{index}}"/> &nbsp;{{choice.time}}
+                <input type="radio" id="shuttleFrom{{choice.id}}" name="shuttleFrom" value="{{choice.id}}"/> &nbsp;{{choice.time}}
               {{/if}}
             </label>
           </div>

@@ -11,7 +11,7 @@ export default Ember.Route.extend({
       var route = this;
       store.queryRecord('guest', {invitee: invitee}).then(function(guest) {
         $("#inviteeGroup").removeClass("has-error");
-        $("#helpBlock").css("display", "none");
+        $("#helpBlock").hide();
 
         if (guest.get('responded')) {
           route.transitionTo('rsvp.already_responded');
@@ -21,7 +21,7 @@ export default Ember.Route.extend({
       }, function(reason){
         if (reason.errors[0].status === "404") {
           $("#inviteeGroup").addClass("has-error");
-          $("#helpBlock").css("display", "inline");
+          $("#helpBlock").show();
         }
       });
     }

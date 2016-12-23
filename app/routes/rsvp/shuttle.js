@@ -1,7 +1,23 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-   model(params) {
+  queryParams: {
+    conflict: {
+      refreshModel: true
+    }
+  },
+
+  conflict: null,
+
+  model(params) {
+    var hasConflict = this.get('conflict');
+
+    if (hasConflict) {
+      $("#conflict").show();
+    } else {
+      $("#conflict").hide();
+    }
+
     return {
       guest: this.store.findRecord('guest', params.guest_id),
       shuttleFrom: this.store.findAll('shuttleFrom'),
