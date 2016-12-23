@@ -14,6 +14,7 @@ export default Ember.Route.extend({
       if (guest.get('attendingMax') > 1) {
         this.transitionTo('rsvp.num_attendees', guest);
       } else {
+        this.currentModel.set("attendingNum", 1);
         this.transitionTo('rsvp.meal_choices', guest);
       }
     },
