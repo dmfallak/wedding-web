@@ -19,20 +19,20 @@ export default App;
 
 /* globals $ */
 
-function reapplyOrientation() {
-	if ($(window).width() < $(window).height()) {
-		$("body").addClass("portrait");
-		$("body").removeClass("landscape");
-	} else {
-		$("body").removeClass("portrait");
-		$("body").addClass("landscape");
-	}
-}
+// function reapplyOrientation() {
+// 	if ($(window).width() < $(window).height()) {
+// 		$("body").addClass("portrait");
+// 		$("body").removeClass("landscape");
+// 	} else {
+// 		$("body").removeClass("portrait");
+// 		$("body").addClass("landscape");
+// 	}
+// }
 
-$().ready(function() {
-	reapplyOrientation();
+// $().ready(function() {
+// 	reapplyOrientation();
 
-	$(window).resize(function() {
-		reapplyOrientation();
-	});
-});
+// 	$(window).resize(function() {
+// 		reapplyOrientation();
+// 	});
+// });

@@ -7,8 +7,13 @@ h2, h3 {
   font-family: 'Lobster';
 }
 
+html {
+  height: 100%;
+  width: 100%;
+}
+
 body {
-  background: url(../assets/cover5.jpg) no-repeat center top fixed;
+  background: url(../assets/cover7.jpg) no-repeat center top fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
