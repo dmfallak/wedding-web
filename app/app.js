@@ -16,23 +16,3 @@ App = Ember.Application.extend({
 loadInitializers(App, config.modulePrefix);
 
 export default App;
-
-/* globals $ */
-
-// function reapplyOrientation() {
-// 	if ($(window).width() < $(window).height()) {
-// 		$("body").addClass("portrait");
-// 		$("body").removeClass("landscape");
-// 	} else {
-// 		$("body").removeClass("portrait");
-// 		$("body").addClass("landscape");
-// 	}
-// }
-
-// $().ready(function() {
-// 	reapplyOrientation();
-
-// 	$(window).resize(function() {
-// 		reapplyOrientation();
-// 	});
-// });

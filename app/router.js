@@ -19,6 +19,7 @@ Router.map(function() {
     this.route('confirm', { path: 'confirm/:guest_id' });
     this.route('already_responded');
   });
+  this.route('registry');
 });
 
 export default Router;
