@@ -24,6 +24,9 @@ export default Ember.Route.extend({
       var toSelection = $('input[name=shuttleTo]:checked').val();
       var fromSelection = $('input[name=shuttleFrom]:checked').val();
 
+      console.log("toSelection: " + toSelection);
+      console.log("fromSelection: " + fromSelection);
+
       this.currentModel.guest.set("shuttleToTime", toSelection);
       this.currentModel.guest.set("shuttleFromTime", fromSelection);
       this.transitionTo('rsvp.confirm', this.currentModel.guest);
