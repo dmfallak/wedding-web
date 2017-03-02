@@ -6,10 +6,10 @@ module.exports = function(defaults) {
   var app = new EmberApp(defaults, {
     // Add options here
     minifyJS: {
-      enabled: false
+      enabled: true
     },
     minifyCSS: {
-      enabled: false
+      enabled: true
     }
   });
 

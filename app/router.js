@@ -20,6 +20,7 @@ Router.map(function() {
     this.route('already_responded');
   });
   this.route('registry');
+  this.route('summary');
 });
 
 export default Router;
