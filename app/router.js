@@ -21,6 +21,7 @@ Router.map(function() {
   });
   this.route('registry');
   this.route('summary');
+  this.route('shuttles');
 });
 
 export default Router;

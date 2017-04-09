@@ -1,0 +1,13 @@
+<div id="shuttlesView">
+  <div class="modal-header">
+    <h4 class="modal-title">Shuttles</h4>
+  </div>
+  <div class="modal-body" id="shuttlesGroup">
+    <p>Please type the secret password.</p>
+    {{input type="password" value=password size="30" class="form-control"}}
+    <span id="helpBlock" class="help-block" style="display:none">Incorrect password.</span>
+  </div>
+  <div class="modal-footer">
+      <button type="button" class="btn btn-primary" {{action "submitPassword" password}}>Check</button>
+  </div>
+</div>
