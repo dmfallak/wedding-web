@@ -1,15 +1,14 @@
 <div class="modal-dialog" role="document">
   <div class="modal-content">
     <div class="modal-header">
-      <h4 class="modal-title">Enter Invitee Code</h4>
+      <h4 class="modal-title">RSVP Window Closed</h4>
     </div>
     <div class="modal-body" id="inviteeGroup">
-      <p>Please type your invitee code as provided on your invitation.</p>
-      {{input type="text" value=invitee size="30" class="form-control"}}
-      <span id="helpBlock" class="help-block" style="display:none">Invitee code not found.</span>
+      <p>The RSVP window is now closed. Please contact Channelle and Devin at
+      <a href="mailto:devinchannellewedding@gmail.com">devinchannellewedding@gmail.com</a> for more information.</p>
     </div>
     <div class="modal-footer">
-        <button type="button" class="btn btn-primary" {{action "submitInvitee" invitee}}>Next</button>
+         {{#link-to "index"}}<button type="button" class="btn btn-primary">Close</button>{{/link-to}}
     </div>
   </div><!-- /.modal-content -->
 </div><!-- /.modal-dialog -->
